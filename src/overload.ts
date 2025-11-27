@@ -2,10 +2,11 @@ export {};
 
 // オーバーロード
 
-// シグネチャー　型制約
+// シグネチャー　型定義＆型制約
 function double(value: number): number;
 function double(value: string): string;
 
+// シグネチャーで型定義しているから（numberかstringか担保できてるから）、anyでもいい
 function double(value: any): any {
   if (typeof value === "number") {
     return value * 2;
